@@ -1,15 +1,13 @@
 from Carta import Carta
-import ramdon
+import random
 
 
 class Baraja:
 
+
     def __init__(self):
         self.baraja = []
-        inicializarCartas(self)
-        ramdon.shuffle(baraja)
 
-    def inicializarCartas(self):
         for i in range(5):
             self.baraja.append(Carta(1))
         
@@ -38,12 +36,15 @@ class Baraja:
             self.baraja.append(Carta(9))
         
         for i in range(14):
-            self.baraja.append(Carta(10))
+            self.baraja.append(Carta(10)) 
+        random.shuffle(self.baraja)
+
+    
 
     def verBaraja(self):
-        for i in baraja:
-            print(i.verCarta())
+        for i in self.baraja:
+            print(i.getTipo())
             
-baraja = Baraja()
-baraja.verBaraja()
+mazo = Baraja()
+mazo.verBaraja()
         
