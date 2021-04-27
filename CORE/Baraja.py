@@ -45,6 +45,5 @@ class Baraja:
         for i in self.baraja:
             print(i.getTipo())
             
-mazo = Baraja()
-mazo.verBaraja()
+
         
